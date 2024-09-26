@@ -111,46 +111,44 @@ ul li a:hover {
 
     nav {
         display: flex;
-        flex-direction: column; /* Вертикальное расположение ссылок */
+        flex-direction: column; 
         align-items: center;
     }
 
     nav a {
-        margin: 10px 0; /* Отступы сверху и снизу для ссылок */
-        display: block;  /* Каждая ссылка будет на новой строке */
+        margin: 10px 0; 
+        display: block;
     }
 
-    /* Адаптивная таблица */
     table {
         width: 100%;
-        font-size: 0.8em;  /* Уменьшаем размер шрифта на мобильных устройствах */
+        font-size: 0.8em;  
     }
 
     table th, table td {
-        padding: 5px; /* Уменьшаем отступы внутри ячеек */
+        padding: 5px; 
     }
 }
 
-/* Медиазапрос для устройств с шириной экрана до 320px */
 @media (max-width: 320px) {
     body {
-        padding: 10px; /* Уменьшаем общие отступы */
+        padding: 10px; 
     }
 
     nav a {
-        margin: 5px 0; /* Уменьшаем отступы между ссылками в навигации */
-        font-size: 0.9em; /* Уменьшаем размер текста ссылок */
+        margin: 5px 0; 
+        font-size: 0.9em; 
     }
 
     table {
-        font-size: 0.6em; /* Ещё сильнее уменьшаем размер шрифта таблицы */
+        font-size: 0.6em; 
     }
 
     table th, table td {
-        padding: 3px; /* Уменьшаем отступы в ячейках таблицы */
+        padding: 3px; 
     }
 
     footer {
-        font-size: 0.8em; /* Уменьшаем текст в футере */
+        font-size: 0.8em; 
     }
 }
