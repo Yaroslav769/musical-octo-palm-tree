@@ -39,23 +39,29 @@ nav a {
     display: inline-block;
 }
 
+/* Таблица */
 .table-section {
     margin: 20px 0;
     padding: 0;
     width: 100%;
 }
 
+/* Обёртка для горизонтальной прокрутки */
+.table-section {
+    overflow-x: auto; /* Добавлено для прокрутки */
+}
+
 table {
-    width: 100%; 
+    width: 100%;
     border-collapse: collapse;
-    margin: 0 auto; 
     color: white;
+    min-width: 600px; /* Минимальная ширина таблицы, чтобы избежать сжатия */
 }
 
 table th, table td {
     padding: 10px;
     text-align: center;
-    word-wrap: break-word; 
+    word-wrap: break-word;
     border: 1px solid #ccc;
 }
 
@@ -71,7 +77,7 @@ form {
     margin-top: 20px;
     background-color: #3399FF;
     padding: 20px;
-    border-radius: 10px; 
+    border-radius: 10px;
     color: white;
 }
 
@@ -85,7 +91,7 @@ footer {
 ul {
     background-color: #3399FF;
     padding: 20px;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 ul li a {
@@ -94,9 +100,10 @@ ul li a {
 }
 
 ul li a:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
+/* Медиазапрос для мобильных устройств */
 @media (max-width: 768px) {
     nav {
         display: flex;
@@ -109,22 +116,23 @@ ul li a:hover {
         display: block;
     }
 
-    table, thead, tbody, th, td, tr {
-        display: block;
+    /* Сохраняем таблицу полностью с горизонтальной прокруткой */
+    .table-section {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        min-width: 600px; /* Устанавливаем минимальную ширину для таблицы */
     }
 
     th, td {
         padding: 10px;
-        width: 100%;
-        text-align: left;
-    }
-
-    table tr {
-        margin-bottom: 15px;
-        background-color: #3399FF;
+        text-align: center;
     }
 }
 
+/* Минимальная ширина 320px */
 @media (max-width: 320px) {
     body {
         padding: 10px;
@@ -137,5 +145,10 @@ ul li a:hover {
     table th, table td {
         font-size: 12px;
         padding: 5px;
+    }
+
+    /* Убедитесь, что таблица прокручивается на маленьких экранах */
+    .table-section {
+        overflow-x: auto;
     }
 }
