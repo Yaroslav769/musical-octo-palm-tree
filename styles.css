@@ -104,3 +104,25 @@ ul li a {
 ul li a:hover {
     text-decoration: underline; 
 }
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column; /* Вертикальное расположение ссылок */
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0; /* Отступы сверху и снизу для ссылок */
+        display: block;  /* Каждая ссылка будет на новой строке */
+    }
+
+    /* Сохраняем таблицу полностью с горизонтальной прокруткой */
+    .table-section {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        min-width: 600px; /* Устанавливаем минимальную ширину для таблицы */
+    }
+}
