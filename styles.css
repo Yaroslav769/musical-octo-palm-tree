@@ -105,6 +105,10 @@ ul li a:hover {
     text-decoration: underline; 
 }
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
     nav {
         display: flex;
         flex-direction: column; /* Вертикальное расположение ссылок */
@@ -124,5 +128,29 @@ ul li a:hover {
 
     table th, table td {
         padding: 5px; /* Уменьшаем отступы внутри ячеек */
+    }
+}
+
+/* Медиазапрос для устройств с шириной экрана до 320px */
+@media (max-width: 320px) {
+    body {
+        padding: 10px; /* Уменьшаем общие отступы */
+    }
+
+    nav a {
+        margin: 5px 0; /* Уменьшаем отступы между ссылками в навигации */
+        font-size: 0.9em; /* Уменьшаем размер текста ссылок */
+    }
+
+    table {
+        font-size: 0.6em; /* Ещё сильнее уменьшаем размер шрифта таблицы */
+    }
+
+    table th, table td {
+        padding: 3px; /* Уменьшаем отступы в ячейках таблицы */
+    }
+
+    footer {
+        font-size: 0.8em; /* Уменьшаем текст в футере */
     }
 }
